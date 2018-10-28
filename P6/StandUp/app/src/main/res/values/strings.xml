@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Stand Up!</string>
+    <string name="alarm_on_toast">Stand Up Alarm On!Akan berjalan setelah 3 detik</string>
+    <string name="alarm_off_toast">Stand Up Alarm Off!</string>
+    <string name="notification_title">Stand Up Alert</string>
+    <string name="notification_text">Alarm Mengulang setiap 3 detik !</string>
+    <string name="alarm_off">Alarm off</string>
+    <string name="alarm_on">Alarm on</string>
+
+</resources>

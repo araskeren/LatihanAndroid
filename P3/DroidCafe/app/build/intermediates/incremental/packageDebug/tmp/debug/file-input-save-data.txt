@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun Oct 21 19:04:50 ICT 2018
+0.baseType=DIRECTORY
+0.base=D\:\\Project\\Android\\LatihanAndroid\\P3\\DroidCafe\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+0.path=classes.dex
+0.set=DEX
+count=1

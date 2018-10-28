@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context='.FormActivity'>
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Form"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Nama Lengkap"
+
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/edNama"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Lengkap"
+                    android:layout_below="@+id/txtNama"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Alamat"
+
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/edAlamat"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Alamat"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Kota"
+                    android:layout_weight="1"/>
+                <Spinner
+                    android:id="@+id/edKota"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtKota"
+                    android:layout_weight="2"
+                    android:entries="@array/list_kota"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Date"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/edDate"
+                    android:clickable="true"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:layout_weight="2"
+                    android:hint="Tanggal"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Email"
+                    android:layout_weight="1"/>
+                <EditText
+                    android:id="@+id/edEmail"
+                    android:clickable="true"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="Email"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Jenis Kelamin"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Cowok"
+                            android:layout_weight="1"
+                            android:gravity="center|left"/>
+
+                        <RadioButton
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="Cewek"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="Hobi"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/cb_windows"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:text="Membaca" />
+                    <CheckBox
+                        android:id="@+id/cb_windows"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Memancing" />
+                    <CheckBox
+                        android:id="@+id/cb_windows"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Bersepeda" />
+                    <CheckBox
+                        android:id="@+id/cb_windows"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Main Game" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/btnSimpan"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="SIMPAN"
+                    android:layout_weight="1"/>
+                <Button
+                    android:id="@+id/btnBatal"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="38px"
+                    android:text="BATAL"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

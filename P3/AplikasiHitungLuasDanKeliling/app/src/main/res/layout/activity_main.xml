@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button android:id="@+id/segitiga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appname1"
+            android:onClick="viewSegitiga"/>
+
+        <Button android:id="@+id/lingkaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appname2"
+            android:onClick="viewLingkaran"
+            android:layout_toRightOf="@id/segitiga"
+            android:layout_toEndOf="@id/segitiga"
+            />
+        <Button android:id="@+id/persegi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appname3"
+            android:layout_below="@id/segitiga"
+            android:onClick="viewPersegi"/>
+
+        <Button android:id="@+id/kubus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appname4"
+            android:layout_below="@id/lingkaran"
+            android:layout_toRightOf="@id/persegi"
+            android:onClick="viewKubus"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aplikasi Hitung Luas Dan Keliling</string>
+    <string name="appname1">Segitiga</string>
+    <string name="appname2">Lingkaran</string>
+    <string name="appname3">Persegi</string>
+    <string name="appname4">Kubus</string>
+    <string name="lebarTombol">wrap_content</string>
+</resources>

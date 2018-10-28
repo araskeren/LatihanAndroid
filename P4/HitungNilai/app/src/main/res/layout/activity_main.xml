@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="NIM"/>
+
+            <EditText
+                android:id="@+id/edNim"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:hint="NIM" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="NAMA"/>
+
+            <EditText
+                android:id="@+id/edNama"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:hint="NAMA" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="TUGAS"/>
+
+            <EditText
+                android:id="@+id/edTugas"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="TUGAS" />
+            <EditText
+                android:id="@+id/edPersentaseTugas"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="%"
+                />
+            <EditText
+                android:id="@+id/edHasilTugas"
+                android:layout_width="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:hint="Hasil "
+                android:editable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="UTS"/>
+
+            <EditText
+                android:id="@+id/edUTS"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="UTS" />
+            <EditText
+                android:id="@+id/edPersentaseUTS"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="%" />
+            <EditText
+                android:id="@+id/edHasilUTS"
+                android:layout_width="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:hint="Hasil "
+                android:editable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="UAS"/>
+
+            <EditText
+                android:id="@+id/edUAS"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="UTS" />
+            <EditText
+                android:id="@+id/edPersentaseUAS"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:maxLength="2"
+                android:hint="%" />
+            <EditText
+                android:id="@+id/edHasilUAS"
+                android:layout_width="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:hint="Hasil "
+                android:editable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="Nilai Akhir"/>
+
+            <EditText
+                android:id="@+id/edNAAngka"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:hint="Angka"
+                android:editable="false"/>
+            <EditText
+                android:id="@+id/edNAHuruf"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:hint="Huruf"
+                android:editable="false"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"
+                android:text="Predikat"
+                />
+
+            <EditText
+                android:id="@+id/edPredikat"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:hint="Predikat"
+                android:editable="false"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnHitung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="HITUNG"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

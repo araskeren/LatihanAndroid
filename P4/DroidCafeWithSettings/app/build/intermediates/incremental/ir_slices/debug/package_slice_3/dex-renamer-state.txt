@@ -1,0 +1,4 @@
+#Sun Oct 21 19:38:29 ICT 2018
+base.0=D\:\\Project\\Android\\LatihanAndroid\\P4\\DroidCafeWithSettings\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\20
+path.0=classes.dex
+renamed.0=classes.dex

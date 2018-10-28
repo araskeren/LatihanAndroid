@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Menggunakan Relative Layout</string>
+    <string name="nama">Nama   : Arum Maulidiniah. </string>
+    <string name="nim" >Nim    : A11.2015.08905</string>
+    <string name="alamat">Alamat : Jl. Stonen Timur no 302</string>
+    <string name="telp">Telp   : 0813546848731</string>
+    <string name="email">Email  : arumdonalduck11@gmail.com</string>
+    <string name="photo">@drawable/arum</string>
+</resources>
