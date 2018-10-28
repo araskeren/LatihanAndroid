@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
         if(barangViewItemList == null)
         {
             barangViewItemList = new ArrayList<BarangViewItem>();
-            barangViewItemList.add(new BarangViewItem("Audi", R.drawable.donut_circle, 1000));
-            barangViewItemList.add(new BarangViewItem("BMW", R.drawable.donut_circle, 100));
-            barangViewItemList.add(new BarangViewItem("Benz", R.drawable.donut_circle, 200));
-            barangViewItemList.add(new BarangViewItem("Jeep", R.drawable.donut_circle, 300));
-            barangViewItemList.add(new BarangViewItem("Land Rover", R.drawable.donut_circle, 400));
-            barangViewItemList.add(new BarangViewItem("Future", R.drawable.donut_circle, 500));
+            barangViewItemList.add(new BarangViewItem("Ayam Bakar", R.drawable.ayam_bakar, 12500));
+            barangViewItemList.add(new BarangViewItem("Ayam Balado", R.drawable.ayam_balado, 13000));
+            barangViewItemList.add(new BarangViewItem("Ayam Geprek", R.drawable.ayam_geprek, 7000));
+            barangViewItemList.add(new BarangViewItem("Ayam Kecap", R.drawable.ayam_kecap, 8500));
+            barangViewItemList.add(new BarangViewItem("Ayam Krispi", R.drawable.ayam_krispi, 5000));
+            barangViewItemList.add(new BarangViewItem("Ayam Rendang", R.drawable.ayam_rendang, 18000));
         }
     }
 
