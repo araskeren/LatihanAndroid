@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             fos.write(text.getBytes());
 
             mEditText.getText().clear();
-            Toast.makeText(this, "Saved to " + getFilesDir() + "/" + FILE_NAME,
+            Toast.makeText(this, "Data Berhasil disimpan",
                     Toast.LENGTH_LONG).show();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
