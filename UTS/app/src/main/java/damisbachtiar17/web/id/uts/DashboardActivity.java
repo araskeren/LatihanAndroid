@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -24,16 +25,26 @@ public class DashboardActivity extends  AppCompatActivity {
     SharedPreferences preferences;
     public static final String KEYPREF = "HARGA";
     public static final String KEYVALUE = "KEYVALUE";
+    public static final String USERPREF = "USER";
+    public static final String KEYNAMA = "NAMA";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Dashboard");
+        preferences = getSharedPreferences(USERPREF, Context.MODE_PRIVATE);
+        getSupportActionBar().setTitle(preferences.getString(KEYNAMA, ""));
+        Intent intent = getIntent();
+        totalHarga = (TextView) findViewById(R.id.total_harga);
+        if(intent.hasExtra("harga")){
+            String harga = intent.getStringExtra("harga");
+            Log.d("TEST", "onCreate: "+harga);
+            totalHarga.setText(harga);
+        }
         initializebarangViewItemList();
 
-        totalHarga = (TextView) findViewById(R.id.total_harga);
-        preferences = getSharedPreferences(KEYPREF, Context.MODE_PRIVATE);
-        totalHarga.setText(preferences.getString(KEYVALUE, "999"));
+
+//        preferences = getSharedPreferences(KEYPREF, Context.MODE_PRIVATE);
+//        totalHarga.setText(preferences.getString(KEYVALUE, "999"));
 
         // Create the recyclerview.
         RecyclerView recyclerBarang = (RecyclerView)findViewById(R.id.list_barang);
@@ -47,6 +58,7 @@ public class DashboardActivity extends  AppCompatActivity {
         BarangViewData barangDataAdapter = new BarangViewData(barangViewItemList);
         // Set data adapter.
         recyclerBarang.setAdapter(barangDataAdapter);
+
 
 
     }
@@ -68,7 +80,7 @@ public class DashboardActivity extends  AppCompatActivity {
 
     }
 
-    private void displayToast(String pesan){
+    public void displayToast(String pesan){
         Toast.makeText(this, ""+pesan, Toast.LENGTH_SHORT).show();
     }
 
@@ -102,12 +114,12 @@ public class DashboardActivity extends  AppCompatActivity {
         if(barangViewItemList == null)
         {
             barangViewItemList = new ArrayList<BarangViewItem>();
-            barangViewItemList.add(new BarangViewItem("Audi", R.drawable.ayam1, 1000,"Deskripsi 1"));
-            barangViewItemList.add(new BarangViewItem("BMW", R.mipmap.ic_launcher_round, 100,"Deskripsi 2"));
-            barangViewItemList.add(new BarangViewItem("Benz", R.mipmap.ic_launcher_round, 200,"Deskripsi 3"));
-            barangViewItemList.add(new BarangViewItem("Jeep", R.mipmap.ic_launcher_round, 300,"Deskripsi 4"));
-            barangViewItemList.add(new BarangViewItem("Land Rover", R.mipmap.ic_launcher_round, 400,"Deskripsi 5"));
-            barangViewItemList.add(new BarangViewItem("Future", R.mipmap.ic_launcher_round, 500,"Deskripsi 6"));
+            barangViewItemList.add(new BarangViewItem("Ayam Krispi", R.drawable.ayam_krispi, 400,"Deskripsi Ayam Krispi"));
+            barangViewItemList.add(new BarangViewItem("Ayam Geprek", R.drawable.ayam_geprek, 200,"Deskripsi Ayam Geprek"));
+            barangViewItemList.add(new BarangViewItem("Ayam Kecap", R.drawable.ayam_kecap, 300,"Deskripsi Ayam Kecap"));
+            barangViewItemList.add(new BarangViewItem("Ayam Rendang", R.drawable.ayam_rendang, 500,"Deskripsi Ayam Rendang"));
+            barangViewItemList.add(new BarangViewItem("Ayam Bakar", R.drawable.ayam_bakar, 1000,"Deskripsi Ayam Bakar"));
+            barangViewItemList.add(new BarangViewItem("Ayam Balado", R.drawable.ayam_balado, 100,"Deskripsi Ayam Balado"));
         }
     }
     public void sample(){

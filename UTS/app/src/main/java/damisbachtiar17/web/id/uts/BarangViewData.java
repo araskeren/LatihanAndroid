@@ -24,6 +24,7 @@ public class BarangViewData extends RecyclerView.Adapter<ViewHolderBarang> {
 
     private List<BarangViewItem> barangViewItemList;
     SharedPreferences preferences;
+    TextView totalHarga;
     public static final String KEYPREF = "HARGA";
     public static final String KEYVALUE = "KEYVALUE";
 
@@ -53,13 +54,17 @@ public class BarangViewData extends RecyclerView.Adapter<ViewHolderBarang> {
         judulBarang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final View viewMain = layoutInflater.inflate(R.layout.activity_main, parent, false);
+                totalHarga=viewMain.findViewById(R.id.total_harga);
                 Intent intent = new Intent(parent.getContext(),DetailBarang.class);
                 intent.putExtra("judul",judulBarang.getText().toString());
+                intent.putExtra("","");
                 intent.putExtra("harga",hargaBarang.getText().toString());
                 intent.putExtra("deskripsi",deskripsiBarang.getText().toString());
-
+                Log.d("TEST", "onClick: "+totalHarga.getText().toString());
+                intent.putExtra("total",totalHarga.getText().toString());
                 parent.getContext().startActivity(intent);
-                Toast.makeText(parent.getContext(), ""+judulBarang.getText().toString(), Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -68,15 +73,6 @@ public class BarangViewData extends RecyclerView.Adapter<ViewHolderBarang> {
             @Override
             public void onClick(View v) {
 
-                //Log.e("CekHarga ",""+carHargaView.getText().toString());
-                //MainActivity harga= new MainActivity();
-                //harga.updateData(carHargaView.getText().toString());
-                
-                Toast.makeText(parent.getContext(), ""+hargaBarang.getText().toString(), Toast.LENGTH_SHORT).show();
-                // Get car title text.
-                // Create a snackbar and show it.
-                //Snackbar snackbar = Snackbar.make(carImageView, "You click " + carTitle +" image", Snackbar.LENGTH_LONG);
-                //snackbar.show();
             }
         });
 
