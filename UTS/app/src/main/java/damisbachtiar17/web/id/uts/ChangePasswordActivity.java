@@ -13,10 +13,10 @@ import android.widget.Toast;
 public class ChangePasswordActivity extends AppCompatActivity {
 
     EditText pass1,pass2;
-    public static final String KEYPREF = "Key Preferences";
-    public static final String KEYNAMA = "Key Nama";
-    public static final String KEYUSERNAME = "Key Username";
-    public static final String KEYPASSWORD = "Key Password";
+    public static final String KEYPREF = "USER";
+    public static final String KEYNAMA = "NAMA";
+    public static final String KEYUSERNAME = "USERNAME";
+    public static final String KEYPASSWORD = "PASSWORD";
     SharedPreferences preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,7 +3,7 @@ package damisbachtiar17.web.id.uts;
 public class BarangViewItem{
 
     // Save car name.
-    private String namaBarang,deskripsiBarang;
+    private String namaBarang,deskripsiBarang,total;
 
     // Save car image resource id.
     private int idGambar;
@@ -18,6 +18,7 @@ public class BarangViewItem{
         this.deskripsiBarang=deskripsi;
         this.idGambar = idGambar;
         this.idHarga = hargaBarang;
+        this.total=total;
     }
 
     public String getNamaBarang() {
@@ -26,6 +27,14 @@ public class BarangViewItem{
 
     public void setNamaBarang(String namaBarang) {
         this.namaBarang = namaBarang;
+    }
+
+    public String getTotalBarang() {
+        return total;
+    }
+
+    public void setTotalBarang(String total) {
+        this.total = total;
     }
 
     public String getDeskripsiBarang() {
