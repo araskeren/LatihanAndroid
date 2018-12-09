@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UTS</string>
+    <string name="action_settings_1">Call Center</string>
+    <string name="action_settings_2">SMS Center</string>
+    <string name="action_settings_3">Lokasi/Maps</string>
+    <string name="action_settings_4">Ubah Password</string>
+
+
+</resources>
