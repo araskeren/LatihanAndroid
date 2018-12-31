@@ -19,6 +19,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    .gambar-preview {
+        height: 100px;
+        width: 100px;
+    }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -33,9 +43,23 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+                    @guest
+                    
+                    @else
+                    @if(Auth::user()->level=='9')
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('toko.index')}}">TOKO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('transaksi.index')}}">TRANSAKSI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('user.index')}}">USER</a>
+                            </li>
+                        </ul>
+                    @endif
+                    @endguest
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

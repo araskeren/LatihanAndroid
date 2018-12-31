@@ -43,7 +43,7 @@ class TokoController extends Controller
             'nama' => 'required', 
             'alamat' => 'required',
             'pemilik_id'=>'required|integer',
-            'cover'=> 'file',
+            'cover'=> 'required',
         ]);
         if ($validator->fails()) { 
             return response()->json(['error'=>$validator->errors()], 401);            
@@ -72,6 +72,11 @@ class TokoController extends Controller
             return response()->json(['error'=>$validator->errors()], 401);            
         }
         $data = Toko::where('id',$request->id)->first();
+        return response()->json(['data'=>$data],200);
+    }
+
+    public function showByUser(Request $request){
+        $data = Toko::where('pemilik_id',Auth::user()->id)->first();
         return response()->json(['data'=>$data],200);
     }
 

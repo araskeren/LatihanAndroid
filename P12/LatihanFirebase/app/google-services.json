@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "312813779567",
+    "firebase_url": "https://project-keren-damis.firebaseio.com",
+    "project_id": "project-keren-damis",
+    "storage_bucket": "project-keren-damis.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:312813779567:android:6374b8705d6a8d28",
+        "android_client_info": {
+          "package_name": "com.example.d2a.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "312813779567-8cquhbmj6n3rjrjhv6veje2s36pdlou2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA-K7eNelAGWrXWja55h9cMqyY4qUwyXM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

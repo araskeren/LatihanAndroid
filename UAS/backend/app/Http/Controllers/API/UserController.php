@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request; 
 use App\Http\Controllers\Controller; 
 use App\User; 
+use App\Toko;
 use Illuminate\Support\Facades\Auth; 
 use Validator;
 
@@ -19,6 +20,8 @@ class UserController extends Controller
     public function login(){ 
         if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){ 
             $user = Auth::user(); 
+            $toko_id = Toko::select('id')->where('pemilik_id',$user->id)->first();
+            $user->toko_id=($toko_id)?$toko_id->id:0;
             $success['token'] =  $user->createToken('MyApp')-> accessToken; 
             $success['user'] = $user;
             return response()->json(['success' => $success], $this-> successStatus); 
@@ -39,14 +42,18 @@ class UserController extends Controller
             'nama' => 'required', 
             'email' => 'required|email', 
             'password' => 'required', 
-            'c_password' => 'required|same:password', 
+            'c_password' => 'required|same:password',
+            'no_telp'=>'required',
+            'alamat'=>'required', 
         ]);
         if ($validator->fails()) { 
             return response()->json(['error'=>$validator->errors()], 401);            
         }
         $input = $request->all(); 
         $input['password'] = bcrypt($input['password']); 
+        $input['level']=1;
         $user = User::create($input); 
+        
         $success['token'] =  $user->createToken('MyApp')-> accessToken; 
         $success['nama'] =  $user->nama;
         return response()->json(['success'=>$success], $this-> successStatus); 
@@ -56,40 +63,11 @@ class UserController extends Controller
      * 
      * @return \Illuminate\Http\Response 
      */ 
-    public function details() 
-    { 
+    public function details(Request $request) 
+    {
         $user = Auth::user(); 
+        $request->header('Authorization','Bearer'.$request->Authorization);
         return response()->json(['user' => $user], $this-> successStatus); 
-    } 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**

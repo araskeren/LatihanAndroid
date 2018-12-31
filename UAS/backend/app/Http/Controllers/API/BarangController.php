@@ -33,7 +33,6 @@ class BarangController extends Controller
             'nama' => 'required', 
             'harga' => 'required',
             'deskripsi'=>'required',
-            'gambar'=> 'file',
             'toko_id'=> 'required',
         ]);
         if ($validator->fails()) { 
@@ -60,6 +59,12 @@ class BarangController extends Controller
             return response()->json(['error'=>$validator->errors()], 401);            
         }
         $data = Barang::where('toko_id',$request->toko_id)->get();
+        return response()->json(['data'=>$data],200);
+    }
+
+    public function showByUser()
+    {
+        $data = Barang::where('user_id',Auth::user()->id)->get();
         return response()->json(['data'=>$data],200);
     }
 
@@ -92,9 +97,25 @@ class BarangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [ 
+            'nama' => 'required', 
+            'harga' => 'required',
+            'deskripsi'=>'required',
+            'id'=> 'required',
+        ]);
+        if ($validator->fails()) { 
+            return response()->json(['error'=>$validator->errors()], 401);            
+        }
+        $kode=Barang::where('id',$request->id)->update([
+            'nama'=>$request->nama,
+            'harga'=>$request->harga,
+            'deskripsi'=>$request->deskripsi,
+            'gambar'=>($request->gambar)?$request->gambar:null
+        ]);
+
+        return response()->json($kode,200);
     }
 
     /**
@@ -103,8 +124,16 @@ class BarangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [ 
+            'id'=> 'required'
+        ]);
+        if ($validator->fails()) { 
+            return response()->json(['error'=>$validator->errors()], 401);            
+        }
+        $kode=Barang::where('id',$request->id)->delete();
+
+        return response()->json($kode,200);
     }
 }

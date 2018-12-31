@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dip"
+    android:id="@+id/barang"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="NAMA "
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_namabarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="SATUAN "
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_satuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="HARGA BELI "
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_harga_beli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="HARGA JUAL"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_harga_jual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt5"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="STOCK "
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:weightSum="2">
+        <TextView
+            android:id="@+id/txt6"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="STOCK MIN"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_stock_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#3498db"/>
+
+</LinearLayout>
