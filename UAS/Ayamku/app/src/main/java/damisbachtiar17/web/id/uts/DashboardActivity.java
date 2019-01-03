@@ -173,10 +173,15 @@ public class DashboardActivity extends  AppCompatActivity {
             public void onResponse(Call<ResponsModelTransaksi> call, Response<ResponsModelTransaksi> response) {
                 List<DataModelTransaksi> resp = response.body().getResult();
                 Integer total_bayar=0;
-                for (int i=0;i<resp.size();i++){
-                     total_bayar+= Integer.parseInt(resp.get(i).getHarga());
+
+                int i=0;
+                for (DataModelTransaksi result : resp){
+                    total_bayar+= Integer.parseInt(resp.get(i).getHarga());
+                    i++;
                 }
-                Log.e("onResponse", "onResponse: "+total_bayar);
+
+                Log.e("onResponse", "onResponse: "+resp.size());
+
                 totalHarga.setText(total_bayar.toString());
             }
 
